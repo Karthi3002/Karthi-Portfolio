@@ -1,0 +1,166 @@
+.cert-section {
+  background: linear-gradient(135deg, #0e1015, #1a1d23);
+  color: #ffffff;
+  padding: 80px 40px;
+  min-height: 50vh;
+  text-align: center;
+  animation: fadeIn 1s ease;
+}
+
+.cert-intro {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  color: #cccccc;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.cert-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.cert-card {
+  perspective: 1000px;
+  width: 300px;
+  height: 230px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+.cert-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 15px #00e0ff40;
+}
+
+.card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-back {
+  background: linear-gradient(135deg, #1a1f2b, #2d2f3b);
+  transform: rotateY(180deg);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-back h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  background: linear-gradient(90deg, #00e0ff, #6f00ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card-back p {
+  font-size: 16px;
+  color: #cccccc;
+}
+
+/* 🌐 Tablet View (≤ 1024px) */
+@media (max-width: 1024px) {
+  .cert-section {
+    padding: 60px 30px;
+  }
+
+  .cert-intro {
+    font-size: 17px;
+    margin-bottom: 35px;
+  }
+
+  .cert-grid {
+    gap: 30px;
+  }
+
+  .cert-card {
+    width: 260px;
+    height: 210px;
+  }
+
+  .card-back h3 {
+    font-size: 18px;
+  }
+
+  .card-back p {
+    font-size: 15px;
+  }
+}
+
+
+/* 📱 Mobile View (≤ 768px) */
+@media (max-width: 768px) {
+  .cert-section {
+    padding: 50px 20px;
+  }
+
+  .cert-intro {
+    font-size: 16px;
+  }
+
+  .cert-grid {
+    gap: 25px;
+  }
+
+  .cert-card {
+    width: 90%;
+    height: 200px;
+  }
+
+  .card-back h3 {
+    font-size: 17px;
+  }
+
+  .card-back p {
+    font-size: 14.5px;
+  }
+}
+
+
+/* 📱 Extra Small Devices (≤ 480px) */
+@media (max-width: 480px) {
+  .cert-section {
+    padding: 40px 15px;
+  }
+
+  .cert-intro {
+    font-size: 15px;
+  }
+
+  .cert-card {
+    width: 100%;
+    height: 190px;
+  }
+
+  .card-back h3 {
+    font-size: 16px;
+  }
+
+  .card-back p {
+    font-size: 14px;
+    text-align: center;
+    padding: 0 10px;
+  }
+}

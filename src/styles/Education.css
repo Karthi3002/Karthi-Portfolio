@@ -1,0 +1,196 @@
+.education-section {
+  background: linear-gradient(135deg, #0f1116, #1a1d23);
+  color: #ffffff;
+  padding: 80px 40px;
+  min-height: 100vh;
+}
+
+.education-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px;
+  color: #cccccc;
+  font-size: 18px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+  padding-left: 20px;
+  border-left: 3px solid #00e0ff;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 0;
+  left: -31.5px;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, #00e0ff, #6f00ff);
+  border-radius: 50%;
+  border: 3px solid #0f1116;
+  animation: pulseDot 2s infinite;
+}
+
+.timeline-content {
+  background: #1f222a;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #00e0ff40;
+  transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: scale(1.03);
+}
+
+.timeline-content h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #00e0ff;
+}
+
+.timeline-place {
+  font-size: 16px;
+  color: #bbbbbb;
+}
+
+.timeline-year {
+  display: block;
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.timeline-content p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #dddddd;
+}
+
+/* Animations */
+@keyframes pulseDot {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(0, 224, 255, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(0, 224, 255, 0);
+  }
+}
+
+/* 🌐 Tablet View (≤ 1024px) */
+@media (max-width: 1024px) {
+  .education-section {
+    padding: 60px 30px;
+  }
+
+  .education-intro {
+    font-size: 17px;
+    margin-bottom: 40px;
+  }
+
+  .timeline-content {
+    padding: 18px 24px;
+  }
+
+  .timeline-content h3 {
+    font-size: 19px;
+  }
+
+  .timeline-place {
+    font-size: 15px;
+  }
+
+  .timeline-year {
+    font-size: 13px;
+  }
+
+  .timeline-content p {
+    font-size: 14.5px;
+  }
+}
+
+
+/* 📱 Mobile View (≤ 768px) */
+@media (max-width: 768px) {
+  .education-section {
+    padding: 50px 20px;
+  }
+
+  .education-intro {
+    font-size: 16px;
+  }
+
+  .timeline {
+    padding-left: 15px;
+    border-left: 2px solid #00e0ff;
+  }
+
+  .timeline-dot {
+    width: 16px;
+    height: 16px;
+    left: -26px;
+  }
+
+  .timeline-content {
+    padding: 16px 20px;
+  }
+
+  .timeline-content h3 {
+    font-size: 18px;
+  }
+
+  .timeline-place {
+    font-size: 14px;
+  }
+
+  .timeline-year {
+    font-size: 12px;
+  }
+
+  .timeline-content p {
+    font-size: 14px;
+  }
+}
+
+
+/* 📱 Extra Small Devices (≤ 480px) */
+@media (max-width: 480px) {
+  .education-section {
+    padding: 40px 15px;
+  }
+
+  .timeline-content {
+    padding: 14px 18px;
+  }
+
+  .timeline-content h3 {
+    font-size: 17px;
+  }
+
+  .timeline-dot {
+    left: -24px;
+  }
+
+  .education-intro {
+    font-size: 15px;
+  }
+
+  .timeline-place {
+    font-size: 13px;
+  }
+
+  .timeline-year {
+    font-size: 11px;
+  }
+
+  .timeline-content p {
+    font-size: 13.5px;
+  }
+}
