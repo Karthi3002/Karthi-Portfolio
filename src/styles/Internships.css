@@ -1,3 +1,7 @@
+section {
+  scroll-margin-top: 120px; /* Adjust based on your header height */
+}
+
 .internships-section {
   background: linear-gradient(135deg, #0e1015, #1a1d23);
   color: #f1f1f1;

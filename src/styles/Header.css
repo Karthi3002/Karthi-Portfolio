@@ -14,6 +14,7 @@
   margin: 0 40px;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px); /* for Safari support */
+  will-change: transform, backdrop-filter;
   border: 1px solid rgba(0, 224, 255, 0.1);
   transition: background-color 0.3s ease;
 }

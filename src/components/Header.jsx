@@ -6,23 +6,28 @@ function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
-  useEffect(() => {
+useEffect(() => {
+  const handleScroll = () => {
     const sections = document.querySelectorAll('section[id]');
+    let currentSection = '';
 
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      { threshold: 0.6 }
-    );
+    sections.forEach(section => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= 140 && rect.bottom >= 140) {
+        currentSection = section.id;
+      }
+    });
 
-    sections.forEach(section => observer.observe(section));
-    return () => sections.forEach(section => observer.unobserve(section));
-  }, []);
+    setActiveSection(currentSection);
+  };
+
+  window.addEventListener('scroll', handleScroll);
+  handleScroll(); // Initial check on load
+
+  return () => window.removeEventListener('scroll', handleScroll);
+}, []);
+
+
 
   useEffect(() => {
   const handleClickOutside = (event) => {

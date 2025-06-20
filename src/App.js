@@ -14,11 +14,14 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function App() {
-  useEffect(() => {
+useEffect(() => {
   AOS.init({
-    duration: 1000,       // Animation duration
-    once: true,           // Animate only once when scrolling down
-    offset: 100           // Offset from the original trigger point
+    once: true,           // Only animate once
+    duration: 700,        // Reduce duration
+    offset: 100,          // Start animation earlier
+    easing: 'ease-out-cubic',
+    throttleDelay: 99,    // Reduce CPU hit
+    debounceDelay: 50
   });
 }, []);
   return (

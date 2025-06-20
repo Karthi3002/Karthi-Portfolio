@@ -1,3 +1,7 @@
+section {
+  scroll-margin-top: 120px; /* Adjust based on your header height */
+}
+
 .skills-section {
   background: url('../assets/skills.jpg') no-repeat center center/cover;
   position: relative;
@@ -6,7 +10,6 @@
   min-height: 100vh;
   overflow: hidden;
   background-attachment: fixed;
-  animation: fadeIn 1s ease-in-out;
 }
 
 .skills-section::before {

@@ -3,6 +3,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  backface-visibility: hidden;
 }
 
 html, body {
@@ -12,4 +15,34 @@ html, body {
   color: #ffffff;
   font-family: 'Segoe UI', sans-serif;
   scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 100px; /* Adjust to match your header height */
+}
+
+/* Scrollbar for WebKit browsers */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f1116; /* matches your site background */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00e0ff, #6f00ff); /* glow theme */
+  border-radius: 10px;
+  border: 2px solid #0f1116; /* creates space effect */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #00ffff, #8a2be2);
+}
+
+/* Firefox scrollbar (limited support) */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #00e0ff #0f1116;
 }

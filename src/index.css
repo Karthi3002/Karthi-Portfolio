@@ -3,6 +3,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  backface-visibility: hidden;
 }
 
 html, body {
@@ -12,4 +15,8 @@ html, body {
   color: #ffffff;
   font-family: 'Segoe UI', sans-serif;
   scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 100px; /* Adjust to match your header height */
 }
