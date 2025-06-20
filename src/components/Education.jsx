@@ -25,7 +25,7 @@ function Education() {
           </div>
         </div>
 
-        <div className="timeline-item" data-aos="fade-left" data-aos-delay="300">
+        <div className="timeline-item" data-aos="fade-right" data-aos-delay="300">
           <div className="timeline-dot" data-aos="fade-up" data-aos-delay="300"/>
           <div className="timeline-content">
             <h3>Higher Secondary</h3>

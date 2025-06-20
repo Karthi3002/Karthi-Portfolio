@@ -21,7 +21,7 @@ function About() {
               </p>
         </div>
 
-        <div className="about-shape-container" data-aos="fade-left">
+        <div className="about-shape-container" data-aos="zoom-in">
           <div className="about-blob">
             <img src={require('../assets/about.png')} alt="Dev Working" className="blob-image" />
           </div>
